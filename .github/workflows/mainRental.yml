@@ -1,1 +1,29 @@
+# Name of the workflow
+name: Rental Function
 
+# Event that triggers the workflow
+on: [workflow_dispatch]
+
+jobs:
+  SUM_test:
+    # Specify the OS environment
+    runs-on: ubuntu-latest
+
+    steps:
+    # Step 1: Checkout the repository (this should always be done)
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    # Step 2: Setup environment (in this case, Node.js)
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ' 20'
+
+    # Step 3: Install dependencies
+    - name: Install dependencies
+      run: npm install jest
+
+    # Step 4: Run tests or another script
+    - name: Run Rental test
+      run: npx jest
