@@ -26,4 +26,4 @@ jobs:
 
     # Step 4: Run tests or another script
     - name: Run SUM test
-      run: npm test
+      run: npx jest
