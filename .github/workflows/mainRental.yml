@@ -5,7 +5,7 @@ name: Rental Function
 on: [workflow_dispatch]
 
 jobs:
-  SUM_test:
+  Rental_Test:
     # Specify the OS environment
     runs-on: ubuntu-latest
 
